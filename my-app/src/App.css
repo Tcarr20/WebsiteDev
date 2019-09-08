@@ -1,0 +1,150 @@
+
+.header-color{
+  background: #093028;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #237A57, #093028);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #237A57, #093028); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.landing-grid{
+  background: #1f4037;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #99f2c8, #1f4037); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  top: 0px;
+  bottom: 0px;
+
+
+}
+
+.projects-grid{
+  display: flex;
+}
+
+.avatar-img{
+  height: 250px;
+  padding-top: 0em;
+/*animation:spin 1s ease infinite;*/
+  transition: 1s;
+
+
+
+}
+
+@keyframes spin{ 100%
+  from{
+      transform: rotate(0deg);
+  }
+  to{
+      transform: rotate(360deg);
+
+  }
+}
+
+
+
+
+
+.banner-text{
+  background-color: black;
+  opacity: .8;
+  width: 75%;
+  margin: auto;
+  border-radius: 10px;
+
+}
+
+.banner-text h1{
+  font-size: 66px;
+  font-weight: bold;
+  color: white;
+}
+
+.banner-text hr{
+  border-top: 5px dotted white;
+  width: 75%;
+  margin: auto;
+}
+
+.banner-text p{
+  color : white;
+  font-size: 20px;
+  padding: 1em;
+}
+
+.social-links{
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin:inherit;
+
+}
+
+.social-links i {
+  color: white;
+  font-size: 5em;
+  padding: 10px;
+  transition: .2s;
+}
+
+.social-links i:hover {
+  color: green;
+  font-size: 5.4em;
+  padding: 8px;
+}
+
+.contact-body{
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  padding-top: 2em;
+  background: #1f4037;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #99f2c8, #fff);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #99f2c8, #fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.contact-grid{
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  color: black;
+
+
+}
+
+.contact-grid h2{
+
+  font-family: 'Anton',sans-serif;
+  font-weight: bold;
+}
+
+.contact-grid p{
+  font-family: 'Oxygen', sans-serif;
+
+}
+.contact-grid hr{
+  border-top: 5px dotted black;
+  width: 50%;
+  margin: auto;
+  justify-content: center;
+
+}
+.contact-list{
+  justify-content: center;
+  text-align: center;
+  padding-right: 3em;
+}
+
+.contact-list i{
+  text-align: center;
+  justify-content: center;
+  margin-right: .5em;
+  font-size: 50px;
+  padding-right:5px;
+
+
+}
