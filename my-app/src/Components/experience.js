@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {Grid,Cell} from 'react-mdl';
-class Experiance extends Component{
+class Experience extends Component{
 	render(){
 		return(
       <Grid>
@@ -21,4 +21,4 @@ class Experiance extends Component{
 
 }
 
-export default Experiance;
+export default Experience;
