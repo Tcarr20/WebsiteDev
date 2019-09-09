@@ -5,7 +5,7 @@ import { spin } from '../App.css'
 class Landing extends Component{
   	render(){
   		return(
-  			<div style = {{width: '100%',margin: 'auto'}}>
+  			<div className= "landing-div"style = {{width: '100%',height: '100%',margin: 'auto'}}>
 
 
           <Grid className = "landing-grid">
