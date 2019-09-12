@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Grid,Cell} from 'react-mdl'
 import Education from './education';
 import Experience from './experience';
+import Skills from './skills';
 
 class Resume extends Component{
 	render(){
@@ -55,8 +56,8 @@ class Resume extends Component{
 						schoolDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy."
 					/>
 
-					<hr style= {{borderTop: '3px solid #1f4037'}}/>
-					<h2>experience</h2>
+					<hr style= {{borderTop: '3px solid #fff'}}/>
+					<h2>Experience</h2>
 
 					<Experience
 						startYear ={2013}
@@ -64,7 +65,23 @@ class Resume extends Component{
 						jobName = "Roller City"
 						jobDescription ="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy."
 					/>
+					<hr style= {{borderTop: '3px solid #fff'}}/>
+					<h2>Skills</h2>
 
+					<Skills
+						skill = "C++"
+						progress = {100}
+					/>
+
+					<Skills
+						skill = "Big brainyness"
+						progress = {80}
+					/>
+
+					<Skills
+						skill = "Best person"
+						progress = {30}
+					/>
 
 				</Cell>
 
