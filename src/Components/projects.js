@@ -12,9 +12,9 @@ class Projects extends Component{
 toggleCategories(){
 	if(this.state.activeTab === 0){ {/* Game Projects*/}
 		return(
-			<div className="projects-grid">
+			<div className="projects-grid" style = {{display: 'flex'}}>
 				{/* Project 1 */}
-				<Card shadow={5} style={{minWidth: '450',margin: 'auto'}}>
+				<Card shadow={5} style={{minWidth: '450px',margin: 'auto', display: 'flex'}}>
 					<CardTitle style ={{color: 'white',align: 'center', height: '176px', background: 'url(https://img.itch.zone/aW1hZ2UvMzE3MDc2LzE1NjE2MDMucG5n/original/pN%2BEPb.png) center / cover'}} >Fields of Flux</CardTitle>
 					<CardText>
 						Game Jam Project for "Chillennium Game Jam" 2018. Won best in design. I did the effects programming, such as the bloom and grapple mechanics. Mainly acted as design lead.
@@ -30,10 +30,10 @@ toggleCategories(){
 				</Card>
 
 				{/* Project 2 */}
-				<Card shadow={5} style={{minWidth: '450',margin: 'auto'}}>
-					<CardTitle style ={{color: 'white',align: 'center', height: '176px', background: 'url(https://img.itch.zone/aW1hZ2UvNDQ2NTQ4LzIyNTQ1ODYuZ2lm/347x500/XoqNGE.gif) center / cover'}} >Fields of Flux</CardTitle>
+				<Card shadow={5} style={{minWidth: '450px',margin: 'auto', display: 'flex'}}>
+					<CardTitle style ={{color: 'white',align: 'center', height: '176px', background: 'url(https://img.itch.zone/aW1hZ2UvNDQ2NTQ4LzIyNTQ1ODYuZ2lm/347x500/XoqNGE.gif) center / cover'}} >BallPit</CardTitle>
 					<CardText>
-						Built in Unreal Engine 4, for my Game Programming 4250 course at UNT. I built a gravity defying Peer-to-Peer network for rolling around and shooting each other.
+						Built in Unreal Engine 4, for my Game Programming 4250 course at UNTsdfsdf. I built a gravity defying Peer-to-Peer network for rolling around and shooting each other.
 					</CardText>
 					<CardActions border>
 						<a href="https://github.com/Tcarr20/BallPit" rel="noopener noreferrer" target="_blank">
@@ -46,7 +46,7 @@ toggleCategories(){
 				</Card>
 
 				{/* Project 3 */}
-				<Card shadow={5} style={{minWidth: '450',margin: 'auto'}}>
+				<Card shadow={5} style={{minWidth: '450px',margin: 'auto', display: 'flex'}}>
 					<CardTitle style ={{color: 'white',align: 'center', height: '176px', background: 'url(https://img.itch.zone/aW1hZ2UvMTg0MjIwLzg2MTk1Ni5wbmc=/347x500/vWygpb.png) center / cover'}} >Good Cop Rad Cop</CardTitle>
 					<CardText>
 						Game Jam Project for "Chillennium Game Jam" 2017. I was the lead programmer for this game. I created simple AI, and procedural generation of obstacles.
@@ -124,10 +124,13 @@ toggleCategories(){
 
 				 	<Grid >
 						<Cell col={12}>
-							<div classname="content">{this.toggleCategories()}</div>
+							<div classname="content" >
+							{this.toggleCategories()}
+							</div>
 						</Cell>
 					</Grid>
-			</div>
+					</div>
+
 
 
 		)
