@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Grid, Cell, ListItem,List, ListItemContent} from 'react-mdl';
+import MyAvatar from '../AvatarCropped600.png'
 
 class Contact extends Component{
 	render(){
@@ -9,12 +10,12 @@ class Contact extends Component{
 					<Cell col={6}>
 						<h2>Anthony Carr</h2>
 						<img
-						src="https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png"
+						src={MyAvatar}
 						alt="avatar"
 						style={{height:'250px'}}
 						/>
 						<p style = {{width: '75%', margin: 'auto',paddingTop: '1em'}}>
-						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+						Please contact me with any career or internship opportunities.
 
 						</p>
 					</Cell>

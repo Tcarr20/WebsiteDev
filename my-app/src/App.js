@@ -12,7 +12,7 @@ function App() {
             </Link>}  scroll>
                 <Navigation>
                     <Link to="/resume">Resume</Link>
-                    /*<Link to="/aboutMe">About Me</Link>*/
+                    
                     <Link to="/projects">Projects</Link>
                     <Link to="/contact">Contact</Link>
                 </Navigation>
@@ -22,7 +22,7 @@ function App() {
             </Link>}>
                 <Navigation>
                 <Link to="/resume">Resume</Link>
-                /*<Link to="/aboutMe">About Me</Link>*/
+
                 <Link to="/projects">Projects</Link>
                 <Link to="/contact">Contact</Link>
                 </Navigation>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Tabs, Tab, Grid, Cell, Card,CardTitle, CardActions,CardText, Button, CardMenu, IconButton} from 'react-mdl';
+import MyAvatar from '../AvatarCropped600.png'
 
 class Projects extends Component{
 	constructor(props){
@@ -84,7 +85,29 @@ toggleCategories(){
 		)
 	}else if (this.state.activeTab === 3) { {/* React Projects*/}
 		return(
-			<div><h1>This is React</h1></div>
+			<div className= "landing-div"style = {{width: '100%',height: '100%',margin: 'auto'}}>
+
+				<Grid className = "landing-grid">
+					<Cell col ={12}>
+						<img
+							src={MyAvatar}
+							alt="avatar"
+							className="avatar-img"
+						/>
+						<div className="banner-text">
+							<h1> This website was built by me!</h1>
+							<hr/>
+
+						<p> I built this website using React-mdl. I hope you like it as much as I liked building it.</p>
+						</div>
+						<p style ={{color: 'white'}}>
+						It's scalable too try moving the window around!
+						</p>
+
+					</Cell>
+
+				</Grid>
+			</div>
 		)
 	}
 }

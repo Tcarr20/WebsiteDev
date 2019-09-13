@@ -3,6 +3,7 @@ import {Grid,Cell} from 'react-mdl'
 import Education from './education';
 import Experience from './experience';
 import Skills from './skills';
+import MyAvatar from '../AvatarCropped600.png'
 
 class Resume extends Component{
 	render(){
@@ -13,58 +14,77 @@ class Resume extends Component{
 				<Cell col={4}>
 					<div  style={{textAlign: 'center'}}>
 						<img
-						 src="https://cdn1.iconfinder.com/data/icons/user-pictures/101/malecostume-512.png"
+						 src={MyAvatar}
 						 alt="avatar"
 						 style = {{height: '200px'}}
 						 />
 					</div>
 					<h2 style={{paddingTop: '2em'}}>Anthony Carr</h2>
-					<h4 style = {{color: 'grey'}}>Programmer</h4>
+					<h4 style = {{color: 'grey'}}>Software Developer</h4>
 					<hr style ={{borderTop: '1em solid #00000', width: '50%'}}/>
 					<p>
-					Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+						I	am	an	aspiring	software	developer	that	has	spent	several	years	programming, animating,
+							designing,	and	publishing	my	own	video	games	and	mobile	applications. While	developing
+							on	my	own	is	a	fun	and	exciting	process,	I	want	to	take	my	skills	and apply	them	to
+							something	bigger.	I	seek	opportunities	to	not	only	help	a	company develop,	but	also	myself.
 					</p>
 					<hr style ={{borderTop: '1em solid #00000', width: '50%'}}/>
 					<h5>Address</h5>
-					<p>123 Hacker way</p>
+					<p>105	Spring	St,	Aubrey,	TX	76227</p>
 					<h5>Phone</h5>
 					<p>(316) 880-1042</p>
 					<h5>Email</h5>
 					<p>Tcarr204@gmail.com</p>
-					<h5>Website</h5>
-					<p>YOU ARE HERE</p>
 				</Cell>
 
 				<Cell className="resume-right-side" col={8}>
 					<h2>Education</h2>
 					<Education
-						startYear={2013}
-						endYear ={2014}
-						schoolName="Kansas State University"
-						schoolDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy."
+						startYear={2016}
+						endYear = "Current"
+						schoolName="University of North Texas"
+						schoolDescription="In	progress	BS	in	Computer	Science. In	progress	Certification	in	game	programming. Cumulative	GPA	3.3"
 					/>
 					<Education
 						startYear={2014}
 						endYear ={2016}
-						schoolName="Butler Community College"
-						schoolDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy."
-					/>
-					<Education
-						startYear={2016}
-						endYear = "Current"
-						schoolName="University of North Texas"
-						schoolDescription="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy."
+						schoolName="Butler	County	Community	Collage"
+						schoolDescription="Courses	in	3D	Animation	and	Interactive	Technology. No	Degree,	transfer. Presidential	Honor	Roll. Dean’s	List"
 					/>
 
+
 					<hr style= {{borderTop: '3px solid #fff'}}/>
+
 					<h2>Experience</h2>
+
+					<Experience
+						startYear ={2018}
+						endYear="Current"
+						jobName = "Computer	Laboratory	Technician"
+						jobLocation = "UNT	Student	Computer	Labs"
+						jobDescription = "This	opportunity	allowed	for	exciting	challenges	in	day	to	day computation	issues."
+						jobList1 ="Worked	on	projects	here	such	as: "
+						jobList2 ="Setting	up	server	to	charge	students	for	copying	on	in	house	printers."
+						jobList3 = "Updating	and	maintaining	Images	on	Lab	computers."
+						jobList4 = "Rewiring	Laboratory	network	after	remodel."
+					/>
 
 					<Experience
 						startYear ={2013}
 						endYear={2015}
-						jobName = "Roller City"
-						jobDescription ="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy."
+						jobName = "DJ	and	Master	of	Ceremonies"
+						jobLocation = "Complete	Weddings	and	Events,	Wichita	Kansas."
+						jobDescription ="This	was	an	experience	that	allowed	my	technical,	public	speaking	and problem	solving	skills	to	work	simultaneously."
+						jobList1 = "Responsibilities	include:"
+						jobList2 = "Setting	up	meetings	with	Clients	to	discuss,	requirements,	layout,	and timing	at	event."
+						jobList3 = "Keeping	record	of	music	library,	format	drives	for	specific	machine usage."
+						jobList4 = "Setup	system	for	transportable	photo-boot."
+						jobList5 = "Setup	and	Tear	down	of	lighting,	and	sound	system."
+						jobList6 = "Created	solutions	for	technical	issues	that	would	arise	on	event	by event	basis."
+
 					/>
+
+
 					<hr style= {{borderTop: '3px solid #fff'}}/>
 					<h2>Skills</h2>
 
@@ -74,13 +94,53 @@ class Resume extends Component{
 					/>
 
 					<Skills
-						skill = "Big brainyness"
+						skill = "C"
+						progress = {90}
+					/>
+
+					<Skills
+						skill = "C#"
+						progress = {70}
+					/>
+
+					<Skills
+						skill = "Python"
+						progress = {50}
+					/>
+
+					<Skills
+						skill = "JavaScript"
+						progress = {50}
+					/>
+
+					<Skills
+						skill = "Css"
+						progress = {60}
+					/>
+
+					<Skills
+						skill = "Object	Oriented	Programming"
+						progress = {100}
+					/>
+
+					<Skills
+						skill = "Auto-Desk 3DS Max"
 						progress = {80}
 					/>
 
 					<Skills
-						skill = "Best person"
-						progress = {30}
+						skill = "Auto-Desk Inventor"
+						progress = {60}
+					/>
+
+					<Skills
+						skill = "Adobe Creative Suite: Illustrator, Photoshop,	Premier	Pro,	Indesign"
+						progress = {70}
+					/>
+
+					<Skills
+						skill = "Microsoft Office: Word, Excel, PowerPoint"
+						progress = {100}
 					/>
 
 				</Cell>

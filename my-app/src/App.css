@@ -74,6 +74,8 @@
   font-size: 66px;
   font-weight: bold;
   color: white;
+  margin: auto;
+  text-align: center;
 }
 
 .banner-text hr{
@@ -116,8 +118,8 @@
   justify-content: center;
   padding-top: 2em;
   background: #1f4037;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #99f2c8, #fff);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #99f2c8, #fff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #99f2c8, #1f4037);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #99f2c8, #1f4037); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
@@ -161,5 +163,11 @@
   font-size: 50px;
   padding-right:5px;
 
+
+}
+.exp-list {
+  color : white;
+  font-size: 20px;
+  padding: 1em;
 
 }
