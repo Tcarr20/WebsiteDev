@@ -68,7 +68,7 @@ toggleCategories(){
 					</CardText>
 					<CardActions border>
 						<a href="https://github.com/Tcarr20/virtuallySubPar" rel="noopener noreferrer" target="_blank">
-						<Button colored ripple>Githib</Button>
+						<Button colored ripple>GitHub</Button>
 						</a>
 					</CardActions>
 				</Card>
