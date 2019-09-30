@@ -20,7 +20,7 @@ class Landing extends Component{
                 <h1> Software Developer</h1>
                 <hr/>
 
-              <p> C | C++ | Unreal Visual/C++ | GML | React/JavaScript/CSS | 3DS Max | Adobe Suite </p>
+              <p> C | C++ | Unreal Visual/C++ | GML | React/ JavaScript/ CSS | 3DS Max | Adobe Suite </p>
                 <div className="social-links">
                 {/*Linkedin*/}
                 <a href="https://www.linkedin.com/in/anthony-carr-161678152/" rel="noopener noreferrer" target="_blank">

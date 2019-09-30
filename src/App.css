@@ -70,15 +70,18 @@
   width: 75%;
   margin: auto;
   border-radius: 10px;
+  min-width: 300px;
 
 }
 
 .banner-text h1{
-  font-size: 66px;
+  font-size: 3.5em;
   font-weight: bold;
   color: white;
   margin: auto;
   text-align: center;
+  padding: 5px;
+
 }
 
 .banner-text hr{
