@@ -6,10 +6,10 @@ import { Link, Route, HashRouter } from 'react-router-dom';
 function App() {
   return (
     <HashRouter basename='/'>
-      <div className="demo-big-content">
+      <div className="MainPage">
           <Layout>
               <Header className= "header-color" title={<Link style={{textDecoration: 'none', color: 'white'}}to="/">
-               MyPortfolio
+               Anthony Carr
               </Link>}  scroll>
                   <Navigation>
                       <Link to="/resume">Resume</Link>
@@ -17,8 +17,7 @@ function App() {
                       <Link to="/contact">Contact</Link>
                   </Navigation>
               </Header>
-              <Drawer title={<Link style={{textDecoration: 'none', color: 'black'}}to="/">
-               MyPortfolio
+              <Drawer title={<Link style={{textDecoration: 'none', color: 'black'}}to="/">         
               </Link>}>
                   <Navigation>
                   <Link to="/resume">Resume</Link>

@@ -39,11 +39,12 @@ class Resume extends Component{
 
 				<Cell className="resume-right-side" col={8}>
 					<h2>Education</h2>
+					
 					<Education
 						startYear={2016}
-						endYear = "Current"
+						endYear = {2020}
 						schoolName="University of North Texas"
-						schoolDescription="In	progress	BS	in	Computer	Science. In	progress	Certification	in	game	programming. Cumulative	GPA	3.3"
+						schoolDescription="Graduated with BS	in	Computer	Science. In	progress	Certification	in	game	programming. Cumulative	GPA	3.45"
 					/>
 					<Education
 						startYear={2014}
@@ -58,15 +59,33 @@ class Resume extends Component{
 					<h2>Experience</h2>
 
 					<Experience
+						startYear ={2020}
+						endYear= "current"
+						jobName = "Software Developer"
+						jobLocation = "State Farm Insurance"
+						jobDescription = "I started as an intern on my last semester as an undergrad, then I was hired on full time as a Software Dev. "
+						jobList1 = "Worked	on	projects	here	such	as: "
+						jobList2 = "Setting	up	a workflow to migrate to REST micro-services for my team."
+						jobList3 = "Designing and purposing a change to current service, to parallelize and export functionality to a micro-service "
+						jobList4 = "Writing unit test with Mockito."
+						jobList5 = "Integrating a gitlab CI/CD Pipeline to micro-services."
+						jobList6 = "Updating and maintaining documentation."
+						
+					/>
+
+					<Experience
 						startYear ={2018}
-						endYear="Current"
-						jobName = "Computer	Laboratory	Technician"
+						endYear= {2020}
+						jobName = "Assistant Manager"
 						jobLocation = "UNT	Student	Computer	Labs"
 						jobDescription = "This	opportunity	allowed	for	exciting	challenges	in	day	to	day computation	issues."
 						jobList1 ="Worked	on	projects	here	such	as: "
 						jobList2 ="Setting	up	server	to	charge	students	for	copying	on	in	house	printers."
 						jobList3 = "Updating	and	maintaining	Images	on	Lab	computers."
 						jobList4 = "Rewiring	Laboratory	network	after	remodel."
+						jobList5 = "Creating tools that allowed me to better generate schedules for my team's working hours"
+						jobList6 = "Successfully purposed a online working alternative, during Covid-19 pandemic outbreak, resulting in no one losing their jobs."
+						
 					/>
 
 					<Experience

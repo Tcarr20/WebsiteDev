@@ -34,7 +34,7 @@ toggleCategories(){
 				<Card shadow={5} style={{minWidth: '450px',margin: '1em', display: 'flex'}}>
 					<CardTitle style ={{color: 'white',align: 'center', height: '176px', background: 'url(https://img.itch.zone/aW1hZ2UvNDQ2NTQ4LzIyNTQ1ODYuZ2lm/347x500/XoqNGE.gif) center / cover'}} >BallPit</CardTitle>
 					<CardText>
-						Built in Unreal Engine 4, for my Game Programming 4250 course at UNT. I built a gravity defying Peer-to-Peer network for rolling around and shooting each other.
+						Built in Unreal Engine 4, for my Game Programming 4250 course at UNT. I built a gravity defying Client-Server network for rolling around and shooting each other.
 					</CardText>
 					<CardActions border>
 						<a href="https://github.com/Tcarr20/BallPit" rel="noopener noreferrer" target="_blank">
@@ -64,7 +64,7 @@ toggleCategories(){
 				<Card shadow={5} style={{minWidth: '450px',margin: '1em', display: 'flex'}}>
 					<CardTitle style ={{color: 'white',align: 'center', height: '176px', background: 'url('+VirSubPar+') center / cover'}} >Virtually SubPar</CardTitle>
 					<CardText>
-						This was built in directX 12 for Game Programming 4110 at UNT, with a library provided by our instructor. I personally built the collision algorithm and rendering algorithem for this 2D mini golf brawler.
+						This was built in directX 12 for Game Programming 4110 at UNT, with a library provided by our instructor. I personally built the collision algorithm and rendering algorithm for this 2D mini golf brawler.
 					</CardText>
 					<CardActions border>
 						<a href="https://github.com/Tcarr20/virtuallySubPar" rel="noopener noreferrer" target="_blank">
@@ -83,13 +83,18 @@ toggleCategories(){
 			<Grid className="projects-grid">
 				{/* Project 1 */}
 				<Card shadow={5} style={{minWidth: '450',margin: 'auto'}}>
-					<CardTitle style ={{color: '#237A57',align: 'center', height: '176px', background: 'url(https://upload.wikimedia.org/wikipedia/commons/0/0b/Qt_logo_2016.svg) center / cover'}} > Midi_midi</CardTitle>
+					<CardTitle style ={{color: '#ffffff',align: 'center', height: '176px', background: 'url(https://img.itch.zone/aW1nLzU4MjM5NzEucG5n/original/cYrMpB.png) center / cover'}} > Midi_midi</CardTitle>
 					<CardText>
-						For a school project a Team and I are creating a Digital Audio Workstation, currently the source is in a private repo. Please ask if you would like to see the progress on this desktop application. We are using QT as our framework. I am creating the sound synthesizer.
+						A Team and I created a Digital Audio Workstation, We are using QT as our framework. I am creating the (close to real time*) sound synthesizer backend.
 					</CardText>
 					<CardActions border>
-						{/*<Button colored>GitHub</Button>
-						<Button colored>Itch</Button>*/}
+					<a href="https://idomybest.itch.io/midi-midi" rel="noopener noreferrer" target="_blank">
+						<Button colored ripple>Itch.io</Button>
+						</a>
+
+					<a href="https://github.com/Tcarr20/Midi_midiArchive" rel="noopener noreferrer" target="_blank">
+						<Button colored ripple>GitHub </Button>
+						</a>
 					</CardActions>
 					<CardMenu style = {{color: '#237A57'}}>
 					</CardMenu>
