@@ -67,7 +67,7 @@ class Resume extends Component{
 						jobList1 = "Worked	on	projects	here	such	as: "
 						jobList2 = "Setting	up	a workflow to migrate to REST micro-services for my team."
 						jobList3 = "Designing and purposing a change to current service, to parallelize and export functionality to a micro-service "
-						jobList4 = "Writing unit test with Mockito."
+						jobList4 = "Writing unit tests with Mockito."
 						jobList5 = "Integrating a gitlab CI/CD Pipeline to micro-services."
 						jobList6 = "Updating and maintaining documentation."
 						
