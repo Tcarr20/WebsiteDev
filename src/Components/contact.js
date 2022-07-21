@@ -25,21 +25,21 @@ class Contact extends Component{
 						<div className = "contact-list">
 							<List>
 							<ListItem>
-								<ListItemContent style ={{fontSize: '25px', fontFamily: 'Anton', justifyContent: 'right'}}>
+								<ListItemContent style ={{fontSize: '25px', fontFamily: 'Anton', justifyContent: 'center', minWidth : '300px'}}>
 									<i className = "fa fa-phone-square" aria-hidden="true"/>
 										(316) 880-1042
 								</ListItemContent>
 							</ListItem>
 
 							<ListItem>
-								<ListItemContent style ={{fontSize: '25px', fontFamily: 'Anton', justifyContent: 'right'}}>
+								<ListItemContent style ={{fontSize: '25px', fontFamily: 'Anton', justifyContent: 'center', minWidth : '301px'}}>
 									<i className = "fa fa-envelope-square" aria-hidden="true"/>
 										Tcarr204@gmail.com
 								</ListItemContent>
 							</ListItem>
 
 							<ListItem>
-								<ListItemContent style ={{fontSize: '25px', fontFamily: 'Anton', justifyContent: 'right'}}>
+								<ListItemContent style ={{fontSize: '25px', fontFamily: 'Anton', justifyContent: 'center', minWidth : '300px'}}>
 									<i className = "fa fa-linkedin-square" aria-hidden="true"/>
 									{/*Linkedin*/}
 									<a href="https://www.linkedin.com/in/anthony-carr-161678152" rel="noopener noreferrer" target="_blank">
