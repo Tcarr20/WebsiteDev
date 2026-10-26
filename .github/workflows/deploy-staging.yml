@@ -37,7 +37,7 @@ jobs:
 
       - name: Build
         working-directory: my-app
-        run: npm run build -- --base-href "/AnthonyCarrWebsite/"
+        run: npm run build -- --base-href "/WebsiteDev/"
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
