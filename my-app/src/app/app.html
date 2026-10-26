@@ -1,0 +1,91 @@
+<main>
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a class="wordmark" href="#top" aria-label="Anthony Carr home">AC<span>.</span></a>
+    <div class="nav-links">
+      <a href="#work">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section id="top" class="hero section-shell">
+    <p class="eyebrow"><span></span> Bella Vista, Arkansas</p>
+    <div class="hero-grid">
+      <div>
+        <p class="kicker">Hello, I’m Anthony.</p>
+        <h1>I make complex systems<br /><em>feel simpler.</em></h1>
+      </div>
+      <div class="hero-copy">
+        <p>
+          Software engineer focused on turning messy, real-world problems into dependable tools,
+          data pipelines, and systems that make other engineers’ lives easier.
+        </p>
+        <a class="button button-dark" href="mailto:tcarr204@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="hero-footer">
+      <p>Lead Software Engineer</p>
+      <a href="https://www.linkedin.com/in/anthony-carr-161678152" target="_blank" rel="noreferrer">
+        LinkedIn <span aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="work" class="work-section section-shell">
+    <div class="section-label"><span>01</span><p>Selected experience</p></div>
+    <div class="experience-list">
+      <article class="role-card" *ngFor="let role of experience; let index = index">
+        <div class="role-index">0{{ index + 1 }}</div>
+        <div class="role-content">
+          <p class="role-period">{{ role.period }}</p>
+          <h2>{{ role.title }}</h2>
+          <ul>
+            <li *ngFor="let highlight of role.highlights">{{ highlight }}</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills" class="skills-section">
+    <div class="section-shell skills-grid">
+      <div>
+        <div class="section-label light"><span>02</span><p>Toolkit</p></div>
+        <h2>Built for<br /><em>the useful stuff.</em></h2>
+      </div>
+      <div class="skill-list">
+        <div class="skill-row" *ngFor="let group of skillGroups">
+          <p>{{ group.label }}</p>
+          <p>{{ group.value }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="education section-shell">
+    <div class="section-label"><span>03</span><p>Education</p></div>
+    <div class="education-card">
+      <p class="degree">BS, Computer Science</p>
+      <p>University of North Texas</p>
+      <p class="year">Dec 2020</p>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="section-shell footer-grid">
+      <div>
+        <p class="eyebrow"><span></span> Available for a conversation</p>
+        <h2>Have a knotty<br />problem to <em>untangle?</em></h2>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:tcarr204@gmail.com">tcarr204@gmail.com <span aria-hidden="true">↗</span></a>
+        <a href="tel:+13168801042">316.880.1042 <span aria-hidden="true">↗</span></a>
+        <a href="https://www.linkedin.com/in/anthony-carr-161678152" target="_blank" rel="noreferrer">LinkedIn <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+    <div class="section-shell footer-bottom">
+      <p>© 2026 Anthony Carr</p>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</main>
