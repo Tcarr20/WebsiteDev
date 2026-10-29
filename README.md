@@ -10,7 +10,6 @@ A TypeScript Angular resume site for Anthony Carr, Lead Software Engineer.
 ## Local development
 
 ```bash
-cd my-app
 npm ci
 npm start
 ```
