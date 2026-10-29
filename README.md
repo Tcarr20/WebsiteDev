@@ -24,6 +24,8 @@ npm run build
 
 The static output is written to `dist/anthony-carr-portfolio/browser`.
 
-## Staging deployment
+## Production deployment and rollback
 
-The `Deploy staging site` workflow deploys commits pushed to the `staging` branch to GitHub Pages. Before the first deployment, configure **Settings → Pages → Build and deployment → Source** to **GitHub Actions** in the repository.
+The `Deploy production site` workflow deploys only when it is manually run from GitHub Actions. It defaults to deploying `master`.
+
+To roll back, run the same workflow and enter the commit SHA or tag to restore in the **ref** input. Before the first deployment, configure **Settings → Pages → Build and deployment → Source** to **GitHub Actions** in the repository.

@@ -1,9 +1,12 @@
-name: Deploy staging site
+name: Deploy production site
 
 on:
-  push:
-    branches: [staging]
   workflow_dispatch:
+    inputs:
+      ref:
+        description: Git branch, tag, or commit SHA to deploy. Use an earlier commit SHA to roll back.
+        required: true
+        default: master
 
 permissions:
   contents: read
@@ -11,18 +14,20 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: true
+  group: production-pages
+  cancel-in-progress: false
 
 jobs:
   deploy:
     environment:
-      name: github-pages
+      name: production
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
 
       - name: Set up Node
         uses: actions/setup-node@v4
