@@ -10,6 +10,8 @@ node_modules/
 
 # production
 /build
+/dist
+/.angular
 
 # misc
 .DS_Store
