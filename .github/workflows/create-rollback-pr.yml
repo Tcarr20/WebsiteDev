@@ -1,0 +1,82 @@
+name: Create rollback pull request
+
+on:
+  workflow_dispatch:
+    inputs:
+      target_ref:
+        description: Known-good commit SHA or tag to restore
+        required: true
+        type: string
+      reason:
+        description: Reason for the rollback
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  create-rollback:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout production branch
+        uses: actions/checkout@v4
+        with:
+          ref: master
+          fetch-depth: 0
+
+      - name: Create rollback branch
+        id: rollback
+        env:
+          TARGET_REF: ${{ inputs.target_ref }}
+          REASON: ${{ inputs.reason }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          target_sha="$(git rev-parse "${TARGET_REF}^{commit}")"
+
+          if ! git merge-base --is-ancestor "$target_sha" HEAD; then
+            echo "The target ref must be an ancestor of master." >&2
+            exit 1
+          fi
+
+          branch="rollback/${target_sha:0:12}-${GITHUB_RUN_ID}"
+          commit_message="Rollback production to ${target_sha}
+
+          ${REASON}"
+          rollback_commit="$(printf '%s\n' "$commit_message" | git commit-tree "${target_sha}^{tree}" -p HEAD)"
+
+          git branch "$branch" "$rollback_commit"
+          git push origin "$branch"
+
+          echo "branch=$branch" >> "$GITHUB_OUTPUT"
+          echo "target_sha=$target_sha" >> "$GITHUB_OUTPUT"
+
+      - name: Open rollback pull request
+        uses: actions/github-script@v7
+        env:
+          ROLLBACK_BRANCH: ${{ steps.rollback.outputs.branch }}
+          TARGET_SHA: ${{ steps.rollback.outputs.target_sha }}
+          REASON: ${{ inputs.reason }}
+        with:
+          script: |
+            const { data: pullRequest } = await github.rest.pulls.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `Rollback production to ${process.env.TARGET_SHA.slice(0, 12)}`,
+              head: process.env.ROLLBACK_BRANCH,
+              base: 'master',
+              body: [
+                '## Rollback',
+                '',
+                `Restores the repository tree to \`${process.env.TARGET_SHA}\`.`,
+                '',
+                `**Reason:** ${process.env.REASON}`,
+                '',
+                'Merge this pull request, then manually run **Deploy production site** with `master` selected.',
+              ].join('\n'),
+            });
+
+            core.notice(`Created rollback pull request #${pullRequest.number}: ${pullRequest.html_url}`);

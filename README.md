@@ -29,3 +29,5 @@ The static output is written to `dist/anthony-carr-portfolio/browser`.
 The `Deploy production site` workflow deploys only when it is manually run from GitHub Actions. It defaults to deploying `master`.
 
 To roll back, run the same workflow and enter the commit SHA or tag to restore in the **ref** input. Before the first deployment, configure **Settings → Pages → Build and deployment → Source** to **GitHub Actions** in the repository.
+
+To create a reviewable rollback instead, run **Create rollback pull request** and provide a known-good commit SHA or tag plus a reason. The workflow opens a pull request that restores the target revision; after it is merged, manually run **Deploy production site** with `master`.
