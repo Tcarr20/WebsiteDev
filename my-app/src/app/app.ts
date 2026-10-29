@@ -17,10 +17,10 @@ type Experience = {
 export class AppComponent {
   protected readonly skillGroups = [
     { label: 'Languages', value: 'Python, Java, TypeScript, JavaScript, Gosu' },
-    { label: 'Frontend', value: 'React, HTML, CSS' },
+    { label: 'Frontend', value: 'Angular, React, HTML, CSS' },
     { label: 'Backend', value: 'Node.js, Spring Boot, GraphQL APIs' },
     { label: 'Cloud & data', value: 'AWS Glue, S3, Apache Spark, ETL pipelines' },
-    { label: 'Databases', value: 'PostgreSQL, IBM DB2, SQL' },
+    { label: 'Databases', value: 'PostgreSQL, SQL' },
     { label: 'Delivery', value: 'GitLab CI/CD, Terraform/Tofu, Vault, JFrog, Dynatrace' },
   ];
 
