@@ -26,8 +26,8 @@ The static output is written to `dist/anthony-carr-portfolio/browser`.
 
 ## Production deployment and rollback
 
-The `Deploy production site` workflow deploys only when it is manually run from GitHub Actions. It defaults to deploying `master`.
+The `Deploy production site` workflow automatically builds and publishes the Angular site to the `master` branch of `Tcarr20/tcarr20.github.io` whenever a commit is pushed to this repository's `master` branch. It also supports manual deployments and rollbacks by commit SHA or tag.
 
-To roll back, run the same workflow and enter the commit SHA or tag to restore in the **ref** input. Before the first deployment, configure **Settings → Pages → Build and deployment → Source** to **GitHub Actions** in the repository.
+Before the first deployment, add a `PAGES_DEPLOY_TOKEN` repository secret in **Settings → Secrets and variables → Actions**. Use a fine-grained personal access token that grants **Contents: Read and write** access to the `Tcarr20/tcarr20.github.io` repository. Do not put the token in source code or workflow files. The destination repository's GitHub Pages settings should publish from the `master` branch and root folder.
 
-To create a reviewable rollback instead, run **Create rollback pull request** and provide a known-good commit SHA or tag plus a reason. The workflow opens a pull request that restores the target revision; after it is merged, manually run **Deploy production site** with `master`.
+To roll back, run **Deploy production site** from GitHub Actions and enter the commit SHA or tag to restore in the **ref** input. To create a reviewable rollback instead, run **Create rollback pull request** and provide a known-good commit SHA or tag plus a reason. After merging that pull request, the automatic deployment runs when the change reaches `master`.
